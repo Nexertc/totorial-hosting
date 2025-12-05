@@ -38,12 +38,19 @@ form.addEventListener('submit', async (e) => {
   const formData = new FormData(form);
   
   try {
+    console.log('Mengirim ke:', BACKEND_URL);
+    
     const response = await fetch(BACKEND_URL, {
       method: 'POST',
       body: formData,
-      mode: 'cors',
-      credentials: 'include'
+      mode: 'cors'
     });
+    
+    console.log('Status response:', response.status);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     
     const result = await response.text();
     console.log('Response:', result);
@@ -63,6 +70,7 @@ form.addEventListener('submit', async (e) => {
   } catch (error) {
     statusEl.textContent = '✗ Error: ' + error.message;
     statusEl.style.color = '#ef4444';
-    console.error('Error:', error);
+    console.error('Error lengkap:', error);
+    console.error('Error message:', error.message);
   }
 });
