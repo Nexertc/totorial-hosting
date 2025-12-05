@@ -1,224 +1,87 @@
-<style>
-/* --- GLOBAL --- */
-body{
-    font-family: Arial, sans-serif;
-    background: rgb(32, 34, 41);
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal & Jawaban</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 5vw;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
 
-}
+    .container {
+      width: 50%;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 { text-align: center; margin-bottom: 20px; color: #2563eb; }
+    label { font-weight: bold; display: block; margin: 10px 0 5px; }
+    textarea {
+      width: 100%; padding: 10px; margin-bottom: 15px;
+      border: 1px solid #ccc; border-radius: 6px;
+      resize: vertical; min-height: 60px;
+    }
+    button {
+      display: block; width: 100%; padding: 12px;
+      background: #2563eb; border: none;
+      border-radius: 6px; color: white; font-size: 16px;
+      cursor: pointer; transition: 0.3s;
+    }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
 
-/* --- CARD UTAMA --- */
-.card{
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 18px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    min-height: 100vh;
-    background: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+<div class="container">
+  <h2>Form Soal</h2>
 
+  <!-- GANTI URL DI SINI -->
+  <form action="ardeva.infinityfreeapp.com/save.php" method="POST">
 
+    <label>Nama:</label>
+    <textarea name="nama" placeholder="nama anda" required></textarea>
 
-.card h2{
-    margin: 10px 0 5px;
-    font-size: 28px;
-    color: #333;
-}
+    <label>Kelas:</label>
+    <textarea name="kelas" required></textarea>
 
-/* BIO */
+    <label>Soal 1: Apa fungsi tag &lt;meta charset="UTF-8"&gt;?</label>
+    <textarea name="jawaban1" required></textarea>
 
+    <label>Soal 2: Apa perbedaan relative dan absolute positioning?</label>
+    <textarea name="jawaban2" required></textarea>
 
-/* --- TOMBOL LINK --- */
-.btn-link{
-    display: flex;
-    background: #4a73ff;
-    color: white;
-    padding: 1vw;
-    border-radius: 1vw;
-    margin-bottom: 12px;
-    font-weight: bold;
-    transition: 0.2s;
-    width: 65%;
-    align-items: center;
-    gap: 2vw;
-    border: none;
-}
+    <label>Soal 3: Jelaskan perbedaan let, var, dan const.</label>
+    <textarea name="jawaban3" required></textarea>
 
-.btn-link:hover{
-    background: #2a50ff;
-    transform: scale(1.03);
-}
+    <label>Soal 4: Bagaimana cara menghubungkan form HTML ke PHP?</label>
+    <textarea name="jawaban4" required></textarea>
 
-.nets{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2vw;
-  margin-top: 1.3vw;
- width: 100%;
-}
-.img1{
-    width: 100%;
-    margin-bottom:5vw;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-}
+    <label>Soal 5: Query PHP untuk SELECT * FROM users (MySQLi)?</label>
+    <textarea name="jawaban5" required></textarea>
 
-.btn-link img{
-    width: 17%;
-    border-radius: 1.2vw;
-    margin-left: 4vw;
-}
-hr{
-    border: 0.15vw solid #2a50ff;
-}
+    <input type="hidden" name="lat" id="lat">
+    <input type="hidden" name="lon" id="lon">
 
-.siv{
-    width: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    margin-bottom: 3vw;
-    gap: 2vw;
-}
-
-
-.item{
-    width: 40%;
-  color: black;
-}
-.item img{
-    width: 100%;
-    border-radius: 1.5vw;
-    margin-bottom: 1vw;
-}
-h3{
-    color: #2a50ff;
-    margin-top: 4vw;
-    font-size: 1.8rem;
-}
-.html5,.tentang{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    z-index: 999;
-    display: none;
-    padding: 3vw;
-    overflow-y: auto;
-    flex-direction: column;
-    align-items: center;
-}
-
-hr{
-    border: 0.15vw solid #2a50ff;
-    width: 100%;
-    margin-top: 4vw;
-}
-
-
-
-</style>
-
-<div class="card">
-    <img class="img1" src="https://nexertc.github.io/websitear/img/ardeva.png" alt="profil">
-       <div class="nets">
-
-
-
-    <button onclick="window.location.href='https://nexertc.github.io/websitear'"
-     class="btn-link">
-    <img src="https://nexertc.github.io/websitear/img/nxc.png" alt="foto">
-        Kunjungi website saya </button>
-
-    </div>
-
-     <div class="nets">
-
-        <button class="btn-link">
-        <img src="https://nexertc.github.io/websitear/img/github.png" alt="foto"
-         onclick="window.location.href='https://github.com/Nexertc'">
-        Kunjungi GitHub Saya
-        </button>
-    </div>
-
-
-
-
-    <hr>
-
-
-
-
-    <h3>Halaman Ardeva</h3>
-
-<div class="siv">
-    <div class="item">
-        <img src="https://nexertc.github.io/websitear/img/ardeva.png" alt="foto"
-         onclick="window.location.href=
-         'https://nexertc.github.io/websitear/html/tentang.html'">
-        Tentang saya
-    </div>
-    <div class="item">
-        <img src="https://nexertc.github.io/websitear/img/html5.jpg" alt="foto"  
-        onclick="window.location.href=
-    'https://nexertc.github.io/websitear/html/penjelasanHtml.html'">
-        Penjelasan Tentang HTML
-    </div>
+    <button type="submit">Kirim Jawaban</button>
+  </form>
 </div>
 
+<script>
+// Ambil lokasi user
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(pos => {
+    document.getElementById("lat").value = pos.coords.latitude;
+    document.getElementById("lon").value = pos.coords.longitude;
+  });
+}
+</script>
 
-
-<div class="siv">
-    <div class="item">
-        <img src="https://nexertc.github.io/websitear/img/css.png" alt="foto" 
-        onclick="window.location.href=
-    'https://nexertc.github.io/websitear/html/penjelasanCss.html'">
-        Penjelasan Tentang CSS
-    </div>
-    <div class="item">
-        <img src="https://nexertc.github.io/websitear/img/javascript.png" alt="foto"
-        onclick="window.location.href=
-    'https://nexertc.github.io/websitear/html/PenjelasanJs.html'">
-        Penjelasan Tentang JavaScript
-    </div>
-</div>
-
-
-
-<div class="siv">
-    <div class="item">
-        <img src="https://nexertc.github.io/websitear/img/bgmc.jpg" alt="foto"
-        onclick="window.location.href=
-    'https://nexertc.github.io/websitear/html/mcgg.html'">
-        Magic Chees Go Go
-    </div>
-    <div class="item">
-        <img src="https://nexertc.github.io/websitear/img/linktree1.png" alt="foto"
-        onclick="window.location.href=
-    'https://nexertc.github.io/websitear/html/linktree.html'">
-        Cara membuat Linktree menggunakan sistem code
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div> <!-- Ini adalah penutup dari class card yang utama-->
+</body>
+</html>
