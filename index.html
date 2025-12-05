@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Soal & Jawaban</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 5vw;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 50%;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 { text-align: center; margin-bottom: 20px; color: #2563eb; }
+    label { font-weight: bold; display: block; margin: 10px 0 5px; }
+    textarea {
+      width: 100%; padding: 10px; margin-bottom: 15px;
+      border: 1px solid #ccc; border-radius: 6px;
+      resize: vertical; min-height: 60px;
+    }
+    button {
+      display: block; width: 100%; padding: 12px;
+      background: #2563eb; border: none;
+      border-radius: 6px; color: white; font-size: 16px;
+      cursor: pointer; transition: 0.3s;
+    }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Soal</h2>
+
+  <!-- GANTI URL BACKEND DI SINI -->
+  <form id="answerForm">
+
+    <label>Nama:</label>
+    <textarea name="nama" placeholder="nama anda" required></textarea>
+
+    <label>Kelas:</label>
+    <textarea name="kelas" required></textarea>
+
+    <label>Soal 1: Apa fungsi tag &lt;meta charset="UTF-8"&gt;?</label>
+    <textarea name="jawaban1" required></textarea>
+
+    <label>Soal 2: Apa perbedaan relative dan absolute positioning?</label>
+    <textarea name="jawaban2" required></textarea>
+
+    <label>Soal 3: Jelaskan perbedaan let, var, dan const.</label>
+    <textarea name="jawaban3" required></textarea>
+
+    <label>Soal 4: Bagaimana cara menghubungkan form HTML ke PHP?</label>
+    <textarea name="jawaban4" required></textarea>
+
+    <label>Soal 5: Query PHP untuk SELECT * FROM users (MySQLi)?</label>
+    <textarea name="jawaban5" required></textarea>
+
+    <input type="hidden" name="lat" id="lat">
+    <input type="hidden" name="lon" id="lon">
+
+    <button type="submit">Kirim Jawaban</button>
+  </form>
+  <p id="status" style="text-align: center; margin-top: 10px; font-weight: bold;"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
